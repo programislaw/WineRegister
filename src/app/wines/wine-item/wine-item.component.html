@@ -1,0 +1,17 @@
+
+<div style="cursor: pointer;" 
+class="col-md-12 list-group-item list-group-item-action" > 
+    <div class="row">
+        <div class="col-sm-8">
+            <h5 class="">{{wine.name}} {{wine.kind}} {{wine.volume}}</h5>
+        </div>
+        <div class="btn-group-sm col-sm-4 text-right" role="group">
+            <button type="button" class="btn btn-outline-success btn-sm" (click)="onEdit(id)">Edit</button>
+            <button type="button" class="btn btn-outline-danger btn-sm" (click)="onDelete()">Delete</button>
+            <button type="button" class="btn btn-outline-info btn-sm" (click)="onView(id)">View</button>
+        </div>
+        <div class="col-sm-8">
+        </div>
+    </div>
+</div>
+

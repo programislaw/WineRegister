@@ -1,0 +1,12 @@
++ Implement View Birthday page
++ Fix bredcrumps
+- Fix navbar
++ Implement backend
++ add validations
++ inspect code to find workaround, bugs, bad practics 
++ fix delete 
+- make birthdays taken from backend as observable 
+- fix the issue with main url  
+
+
+- Whats the different between ng serve ad npm start

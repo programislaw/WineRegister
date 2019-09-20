@@ -1,0 +1,57 @@
+<br>
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="wineForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label for="name">First Name</label>
+          <input type="text" id="name" class="form-control" formControlName="name"
+          required minlength="3"
+          placeholder="First Name" [readonly]="isView">
+          <div *ngIf="nameCtr.invalid && (nameCtr.dirty || nameCtr.touched)" class="alert alert-danger">
+            <div *ngIf="nameCtr.errors.required">
+              First name is required.
+            </div>
+            <div *ngIf="nameCtr.errors.minlength">
+                First name must be at least 3 characters long.
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 form-group">
+          <label for="kind">Last Name</label>
+          <input type="text" class="form-control" id="kind" name="kind" formControlName="kind"
+          required minlength="3"
+          placeholder="Kind" [readonly]="isView">
+          <div *ngIf="kindCtr.invalid && (kindCtr.dirty || kindCtr.touched)" class="alert alert-danger">
+              <div *ngIf="kindCtr.errors.required">
+                Last name is required.
+              </div>
+              <div *ngIf="kindCtr.errors.minlength">
+                  Last name must be at least 3 characters long.
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4 form-group">
+            <label for="volume">Volume</label>
+            <input type="text" class="form-control" id="volume" name="volume" formControlName="volume"
+            required minlength="3"
+            placeholder="Volume" [readonly]="isView">
+            <div *ngIf="volumeCtr.invalid && (volumeCtr.dirty || volumeCtr.touched)" class="alert alert-danger">
+                <div *ngIf="volumeCtr.errors.required">
+                  Last name is required.
+                </div>
+                <div *ngIf="volumeCtr.errors.minlength">
+                    Last name must be at least 3 characters long.
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-outline-success btn-sm"  (click)='onSave()' [disabled]="wineForm.invalid" *ngIf="isNew || isEdit">Save</button>
+            <button class="btn btn-outline-danger btn-sm" (click)='onClose()' >Close</button>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
