@@ -76,6 +76,9 @@ export class WineEditComponent implements OnInit {
     this.navigateBack();
   }
 
+  onSubmit() {
+  }
+
   private navigateBack() {
     this.router.navigate(['/wine-register-ui'], { relativeTo: this.route });
   }
