@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "birthdays-register": {
+    "wine-register-ui": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/birthdays-register",
+            "outputPath": "dist/wine-register-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "birthdays-register:build"
+            "browserTarget": "wine-register-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "birthdays-register:build:production"
+              "browserTarget": "wine-register-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "birthdays-register:build"
+            "browserTarget": "wine-register-ui:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "birthdays-register-e2e": {
+    "wine-register-ui-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "birthdays-register:serve"
+            "devServerTarget": "wine-register-ui:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "birthdays-register:serve:production"
+              "devServerTarget": "wine-register-ui:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "birthdays-register"
+  "defaultProject": "wine-register-ui"
 }
