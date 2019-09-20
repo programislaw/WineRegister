@@ -19,15 +19,15 @@ export class WineItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onEdit() {
+  onEdit(id: number) {
     this.router.navigate([this.id + '/edit'], {relativeTo: this.route});
   }
 
-  onView() {
+  onView(id: number) {
     this.router.navigate( [this.id + '/view'], {relativeTo: this.route});
   }
 
-  onDelete() {
+  onDelete(id: number) {
     this.delete.emit(this.id);
   }
 }
