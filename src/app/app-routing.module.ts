@@ -6,8 +6,8 @@ import { WinesListComponent } from './wines/wines-list/wines-list.component';
 
 const routes: Routes = [
 
-    { path: '', redirectTo: '/wine-register-ui', pathMatch: 'full', data: { breadcrumb: 'Wines'}},
-    { path: 'wine-register-ui', data: { breadcrumb: 'Wines'},
+    { path: '', redirectTo: '/wine-register', pathMatch: 'full', data: { breadcrumb: 'Wines'}},
+    { path: 'wine-register', data: { breadcrumb: 'Wines'},
       children: [
         { path: '', component: WinesListComponent, data: { breadcrumb: 'List'}},
         { path: 'new', component: WineEditComponent, data: { breadcrumb: 'New'}},

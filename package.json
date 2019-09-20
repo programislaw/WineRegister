@@ -1,5 +1,5 @@
 {
-  "name": "wine-register-ui",
+  "name": "wine-register",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

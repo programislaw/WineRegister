@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wine-register-ui": {
+    "wine-register": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wine-register-ui",
+            "outputPath": "dist/wine-register",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wine-register-ui:build"
+            "browserTarget": "wine-register:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "wine-register-ui:build:production"
+              "browserTarget": "wine-register:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wine-register-ui:build"
+            "browserTarget": "wine-register:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "wine-register-ui-e2e": {
+    "wine-register-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "wine-register-ui:serve"
+            "devServerTarget": "wine-register:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "wine-register-ui:serve:production"
+              "devServerTarget": "wine-register:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "wine-register-ui"
+  "defaultProject": "wine-register"
 }

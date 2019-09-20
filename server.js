@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Serve static files....
-app.use(express.static(__dirname + '/dist/wine-register-ui'));
+app.use(express.static(__dirname + '/dist/wine-register'));
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/wine-register-ui/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/wine-register/index.html'));
 });
 
 // default Heroku PORT
